@@ -4,7 +4,12 @@
   padding: 0;
 }
 
+html {
+  font-family: "Roboto";
+}
+
 .container {
+  position: relative;
   width: 1140px;
   margin: 0 auto;
 }
@@ -36,10 +41,9 @@ h1 {
 }
 
 .title {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: 41px;
   line-height: 24px;
-  font-weight: 900;
   text-transform: uppercase;
   color: #f9bf3b;
   text-align: center;
@@ -62,7 +66,7 @@ h2.title {
 .promo .promo_text {
   padding: 0 13px;
   margin-top: 23px;
-  font-family: "Roboto Light";
+
   font-size: 21px;
   line-height: 28px;
   font-weight: 300;
@@ -76,17 +80,18 @@ h2.title {
   color: #f9bf3b;
 }
 
-.promo .promo_btn {
+.promo .promo_btn,
+.gift .gift_btn {
   display: block;
   margin: 0px auto;
-  margin-top: 73px;
+  margin-top: 69px;
   width: 321px;
   height: 80px;
   background-image: linear-gradient(0deg, #2798b9 0%, #3ab6da 100%);
   border: 4px solid rgba(0, 0, 0, 0.22);
   box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.17);
   box-shadow: -1px -1px 0px 0px rgba(0, 0, 0, 0.21);
-  font-family: RobotoCondensed;
+
   font-size: 21px;
   line-height: 24px;
   font-weight: 400;
@@ -94,6 +99,11 @@ h2.title {
   color: #ffffff;
   cursor: pointer;
   outline: none;
+  border-radius: 5px;
+}
+
+.gift .gift_btn {
+  margin-top: 48px;
 }
 
 .more {
@@ -118,12 +128,14 @@ h2.title {
 }
 
 .waiting {
-  height: 604px;
+  min-height: 604px;
   background-color: #efefef;
   padding: 85px 0 75px 0;
 }
 
-.waiting .waiting_header {
+.waiting .waiting_header,
+.finish .finish_header,
+.webinar .webinar_header {
   text-align: center;
   font-family: Roboto;
   font-size: 30px;
@@ -132,7 +144,16 @@ h2.title {
   color: #252525;
 }
 
-.waiting .waiting_divider {
+.webinar .webinar_header {
+  margin-top: 37px;
+}
+
+.finish .finish_header {
+  color: #efefef;
+}
+
+.waiting .waiting_divider,
+.finish .finish_divider {
   margin: 0 auto;
   margin-top: 18px;
   width: 217px;
@@ -150,13 +171,12 @@ h2.title {
 }
 
 .waiting .waiting_wrapper {
+  display: flex;
+  justify-content: space-between;
   margin-top: 45px;
 }
 
 .waiting .waiting_wrapper .waiting_item {
-  margin: 0 15px;
-  vertical-align: top;
-  display: inline-block;
   width: 342px;
   text-align: center;
 }
@@ -172,4 +192,173 @@ h2.title {
 
 .waiting .waiting_wrapper .waiting_item .waiting_img {
   width: 100%;
+}
+
+.optimization {
+  min-height: 550px;
+  padding: 102px 0 107px 0;
+}
+
+.optimization .optimization_header,
+.webinar .webinar_header_date {
+  margin-left: 391px;
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #299cbd;
+}
+
+.webinar .webinar_header_date {
+  margin-top: 30px;
+  margin-left: 0;
+  text-align: center;
+  font-size: 36px;
+}
+
+.optimization .optimization_text {
+  margin-top: 25px;
+  margin-left: 391px;
+  font-family: Roboto;
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 300;
+  color: #4a4a4a;
+}
+
+.optimization .optimization_text span {
+  font-weight: 700;
+}
+
+.optimization .optimization_img {
+  position: absolute;
+  top: -54px;
+  left: -240px;
+  z-index: -1;
+}
+
+.finish {
+  min-height: 447px;
+  padding: 86px 0 79px 0;
+  background: url("../img/bg/layers_2.png") center center/cover no-repeat;
+}
+
+.finish .finish_wrapper {
+  margin-top: 41px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.finish .finish_wrapper .finish_item {
+  width: 204px;
+}
+
+.finish .finish_wrapper .finish_round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 115px;
+  height: 115px;
+  background-color: #b4e2ff;
+  border-radius: 100%;
+}
+
+.finish .finish_wrapper .finish_descr {
+  margin-top: 25px;
+  font-family: Roboto;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #efefef;
+  text-align: center;
+}
+
+.gift {
+  min-height: 628px;
+  background-color: #efefef;
+  padding: 86px 0 83px 0;
+}
+
+.gift .gift_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gift .gift_logo .gift_logo_top {
+  width: 111px;
+  height: 60px;
+}
+
+.gift .gift_logo .gift_logo_bot {
+  width: 154px;
+  height: 113px;
+}
+
+.gift .gift_text {
+  margin-top: 42px;
+  margin-left: 394px;
+  margin-right: 395px;
+  font-family: Roboto;
+  font-size: 30px;
+  line-height: 43px;
+  font-weight: 400;
+  color: #252525;
+  text-align: center;
+}
+
+.webinar_logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 89px;
+}
+
+.webinar .webinar_text {
+  margin-top: 25px;
+  margin-bottom: 64px;
+  font-family: Roboto;
+  font-size: 23px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.footer {
+  min-height: 166px;
+  background-color: #000;
+}
+
+.footer .support_policy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 61px 0 0 0;
+}
+
+.footer .support_policy a {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 300;
+  text-decoration: underline;
+  color: #888888;
+}
+
+.footer .support_policy span {
+  color: #888888;
+  padding: 0 3px 0 3px;
+}
+
+.phone {
+  margin-bottom: 69px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 300;
+  color: #888888;
 }
